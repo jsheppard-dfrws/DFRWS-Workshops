@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+          type="text/css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"
+          rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+      
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  background: white;
+  text-align: right;
+}
+.content {
+  flex: 1;
+  overflow: auto;
+}
+
+
+
+    </style>
+  </head>
+
+  
+  
+
+  <div class="ui fixed top pointing inverted stackable menu labmenu">
+    <header class="header item">
+      <i id="toc" class="sitemap icon"></i>
+      
+        <a href="../index.html">  CASE Workshop with Demonstration  </a>
+      
+    </header>
+    <div class="right tab-menu menu">
+      
+        <a class="item" data-tab="CASE Abstract">
+          CASE Abstract
+        </a>
+      
+        <a class="item" data-tab="Details">
+          Details
+        </a>
+      
+    </div>
+  </div>
+
+
+  
+
+  <div class="ui pushable">
+    <div class="ui inverted labeled icon left inline vertical sidebar menu">
+      <br><br>
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-00-Sample-Workshop/book-a/index.html">Exercise-01 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-00-Sample-Workshop/book-b/index.html">Exercise-02 </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-01-Oxygen-Workshop/book-a/index.html">Oxygen Abstract </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-02-Forensic-Intelligence-Workshop/book-a/index.html">Forensic Intelligence Workshop Abstract </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-03-Reverse-Engineering-Malware/book-a/index.html">Reverse Engineering Malware </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-04-Probabilistic-Reasoning/book-a/index.html">Probabilistic Reasoning Abstract </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-05-Women-The-future-of-forensic-computing/book-a/index.html">Women The future of forensic computing Abstract </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-06-CASE-Workshop/book-a/index.html">CASE Abstract </a>
+          
+        
+      
+        
+          
+            <a class="item"
+               href="https://jsheppard-dfrws.github.io/DFRWS-Workshops//topic-07-Schatz-Workshop/book-a/index.html">Schatz </a>
+          
+        
+      
+    </div>
+    <div class="pusher" tabindex="-1">
+      <div class="ui basic segment">
+        <br>
+        
+          <div class="ui tab segment lab" data-tab="CASE Abstract">
+            <h1>CASE Workshop (with Demo)</h1>
+<p>Exchange of cyber-investigation information between organizations and across borders using CASE (with Demo)</p>
+
+          </div>
+        
+          <div class="ui tab segment lab" data-tab="Details">
+            <h1>Exchange of cyber-investigation information between organizations and across borders using CASE (with Demo)</h1>
+<p>As the cybersecurity domain has grown, the amount of increasingly varied information needing to be shared has increased. There is now a greater need to validate, normalize, combine, and correlate investigative data between different countries, domains, organizations, teams, individuals, classification levels, and tools – the status quo is insufficient. </p>
+<p>CASE is an international open-source and community-developed ontology/specification language that aims at covering this gap in the most inclusive manner possible. Work on what eventually became CASE began in 2015 and the project now involves over two dozen public organizations. It derives from UCO and is thus formally cited as CASE/UCO. UCO is intended to allow compatibility between CASE and other preexisting ontologies/schemas. However, unlike prior domain-specific specifications like Structured Threat Information Expression (STIX) and Digital Forensics Analysis eXpression (DFAX), CASE attempts to bring domains together, including incident response, counter-terrorism, criminal justice, forensics, intelligence, and situational awareness. This will enable better workflow efficiencies in laboratories, cross-correlation between investigations under different jurisdictions, potentially on the same malicious actors, and a more aware view of criminal patterns. </p>
+<p>The CASE team facilitates integration of subdomain knowledge from its global academic, private sector, and government community members; the ontology retains a core focus on tracking provenance and casework metadata (e.g. people that performed an action using a specific tool). Linked-data in the form of Resource Description Framework (RDF) graphs are used to export all data as JSON-LD (JSON for Linked-Data) which can be stored for transit, archiving, or tool ingestion. This past year the MITRE Corporation has assisted in improving documentation and the supporting framework, while both E.U. and U.S. governments have begun discussing a mandate for widespread adoption. The Github repositories (<a href="https://github.com/ucoProject">https://github.com/ucoProject</a>) provide proof-of-concept mappings and implementations into forensics tools and outline the details of using the API in different ways. Additionally, exploration tools are available for the Terse RDF Triple Language (Turtle) format that the ontology is specified in. As the ontology evolves it will encompass perspectives from community popular votes. However, custom and private schemas may still be supported for cases where private or government tools desire integration with a pre-existing data model.</p>
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <script>
+    $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+    $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+  </script>
+
+
+
+  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right small menu">
+      <div class="ui tiny basic message segment">
+         Powered by <a href="https://github.com/edeleastar/tutors-ts">tutors-ts.</a> 
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>
